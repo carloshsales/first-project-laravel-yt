@@ -11,11 +11,15 @@
             @csrf
             <div class="form-group">
                 <label for="image">Imagem:</label>
-                <input type="file" id="image" name="image" class="form-control-file" placeholder="Envie sua imagem aqui">
+                <input type="file" id="image" name="image" class="form-control-file" placeholder="Envie sua imagem aqui" required>
             </div>
             <div class="form-group">
                 <label for="title">Evento:</label>
                 <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Data:</label>
+                <input type="date" class="form-control" id="date" name="date" placeholder="Data do evento" required>
             </div>
             <div class="form-group">
                 <label for="title">Cidade</label>
@@ -31,6 +35,24 @@
             <div class="form-group">
                 <label for="title">Descrição</label>
                 <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="title">Adicione itens de infraestrutura</label>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Palco"> Palco
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Open Bar"> Open Bar
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Open Food"> Open Food
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="items[]" value="Brindes"> Brindes
+                </div>
             </div>
 
             <input type="submit" class="btn btn-primary" value="Criar evento">
